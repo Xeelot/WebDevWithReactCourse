@@ -1,0 +1,80 @@
+$background-light: rgba(29, 210, 177, 0.7);
+$background-dark: rgba(42, 27, 161, 0.7);
+$background-dark-full: rgba(42, 27, 161, 1.0);
+$home-size: 1000px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
+}
+
+.view {
+    height: $home-size;
+}
+
+.profile-pic {
+    width: 40%;
+    max-width: 300px;
+}
+
+.row-header {
+    @include zero-margin(0px, 0px);
+}
+
+.row-content {
+    @include zero-margin(50px, 0px);
+    border-bottom: 1px ridge;
+    min-height: $home-size;
+}
+
+.nav-link {
+    font-size: x-large;
+}
+
+.nav-item {
+    min-height: 52px;
+}
+
+.background {
+    @include zero-margin(0px, 0px);
+}
+
+.rgba-gradient {
+    background: -moz-linear-gradient(45deg, $background-dark, $background-light 100%);
+    background: -webkit-linear-gradient(45deg, $background-dark, $background-light 100%);
+    background: -webkit-gradient(linear, 45deg, from($background-dark), to($background-light));
+    background: -o-linear-gradient(45deg, $background-dark, $background-light 100%);
+    background: linear-gradient(to 45deg, $background-dark, $background-light 100%);
+}
+
+.section-header {
+    border-left: 10px solid;
+    border-left-color: $background-dark-full;
+    padding-left: 10px;
+}
+
+footer {
+    @include zero-margin(0px, 0px);
+    line-height: 1;
+    p {
+        margin-bottom: 4px;
+    }
+}
+
+.card-row {
+    padding-bottom: 40px;
+}
+.card {
+    @include zero-margin(0px, 0px);
+    .card-img-top {
+        @include zero-margin(0px, 0px);
+    }
+    .card-title {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .card-body {
+        padding-top: 10px;
+    }
+}
